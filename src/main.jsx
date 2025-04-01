@@ -9,6 +9,7 @@ import Product from './pages/Product.jsx'
 import Cart from './pages/Cart.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
+import MainContext from './common/MainContext.jsx'
 
 let router=createBrowserRouter(
   [
@@ -42,6 +43,8 @@ let router=createBrowserRouter(
 )
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <MainContext>
+       <RouterProvider router={router}/>
+    </MainContext>
   </StrictMode>,
 )
